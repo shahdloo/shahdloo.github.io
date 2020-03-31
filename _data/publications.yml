@@ -1,0 +1,76 @@
+- date: 2019-11-17
+  type: journal
+  status: in press
+  authors: <strong>Shahdloo M.</strong>, &Ccedil;elik E. & &Ccedil;ukur T.
+  title: 'Biased competition in semantic representation during natural visual search'
+  journal: NeuroImage
+  biorxiv: https://www.biorxiv.org/content/10.1101/658096v1
+  doi: 10.1016/j.neuroimage.2019.116383
+  pdf: /uploads/1-s2.0-S1053811919309747-main.pdf
+
+
+- date: 2019-06-03
+  type: preprint
+  status: published
+  authors:  <strong>Shahdloo M.</strong>, &Ccedil;elik E. & &Ccedil;ukur T.
+  title: 'Biased competition in semantic representation during natural visual search'
+  biorxiv: https://www.biorxiv.org/content/10.1101/658096v1
+  server: bioRxiv
+  pdf: https://www.biorxiv.org/content/10.1101/658096v1.full.pdf
+  doi: https://doi.org/10.1101/658096
+  
+
+- date: 2019-06-10
+  type: journal
+  status: published
+  authors: <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E. & &Ccedil;ukur T.
+  title: 'Projection onto Epigraph Sets for Rapid Self-Tuning Compressed Sensing MRI'
+  journal: IEEE Transactions on Medical Imaging
+  volume: 38
+  issue: 7
+  pages: 1677-1689
+  doi: '10.1109/TMI.2018.2885599'
+  arxiv: https://arxiv.org/abs/1802.01892
+  pdf: /uploads/08567963.pdf
+  github: icon-lab/PESCaT
+  demo: http://moshahdloo.com/demo_PESCaT.html
+
+- date: 2019-01-25
+  type: preprint
+  status: published
+  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E. & &Ccedil;ukur T.
+  title: 'Projection onto Epigraph Sets for Rapid Self-Tuning Compressed Sensing MRI'
+  server: arXiv
+  doi: '10.1109/TMI.2018.2885599'
+  arxiv: https://arxiv.org/abs/1802.01892
+  pdf: https://arxiv.org/pdf/1802.01892.pdf
+  github: icon-lab/PESCaT
+
+
+- date: 2018-05-27
+  type: preprint
+  status: unpublished
+  authors:  Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E. & &Ccedil;ukur T.
+  title: 'Synergistic Reconstruction and Synthesis via Generative Adversarial Networks for Accelerated Multi-Contrast MRI'
+  server: arXiv
+  # doi: '10.1109/TMI.2018.2885599'
+  arxiv: https://arxiv.org/pdf/1805.10704
+  arxiv-id: '1805.10704'
+  pdf: https://arxiv.org/pdf/1805.10704.pdf
+  # github: icon-lab/PESCaT
+
+
+
+
+
+# - date: 2019-11-15
+#   type: preprint
+#   status: unpublished
+#   authors: Botvinik-Nezer, R. et al.
+#   title: 'Variability in the analysis of a single neuroimaging dataset by many teams'
+#   bioRxiv: https://www.biorxiv.org/content/10.1101/843193v1
+#   server: bioRxiv
+#   pdf: https://www.biorxiv.org/content/biorxiv/early/2019/11/15/843193.full-text.pdf
+#   website: http://narps.info
+#   doi: https://doi.org/10.1101/843193
+#   github: poldrack/narps
