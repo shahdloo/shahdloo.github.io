@@ -1,0 +1,16 @@
+{% assign pubs = site.data.publications | sort:"date" | reverse %}
+{% assign pubabstracts = site.data.abstracts | sort:"date" | reverse %}
+
+
+{% assign preprints = pubs | where:"type","preprint" %}
+{% assign articles = pubs | where:"type","journal" %}
+{% assign abstracts = pubs | where:"type","abstract" %}
+
+<span>Please use <a href="uploads/refs.bib" target="_blank" rel="noopener"><u><i>this</i></u></a> bibliography file to cite any of the works below.</span>
+
+<h2>Articles</h2>
+{% include print_research.html pubs=pubs %}
+
+<h2>Conference publications</h2>
+{% include print_abstracts.html pubs=pubabstracts %}
+

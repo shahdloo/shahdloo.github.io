@@ -1,0 +1,100 @@
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+<script type="text/javascript">
+      function showhide(id) {
+              var e = document.getElementById(id);
+              e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+       }
+    </script>
+<ul class="item">
+  {% for pub in include.pubs %}
+
+  {% if pub.status == 'published' %}
+    {% if pub.type == 'preprint' %}
+      {% continue %}
+    {% endif %}
+  {% endif %}
+
+    <li class="item">
+      
+     
+    <div style="float:right;clear:both">
+      {% if pub.status != 'in press' %}
+          <a 
+      {% if pub.doi %} href="https://plu.mx/plum/a/?doi={{ pub.doi }}"
+      {% elsif pub.arxiv-id %} href="https://plu.mx/plum/a/?arxiv={{ pub.arxiv-id }}"
+             {% endif %} data-popup="right" data-size="medium" class="plumx-plum-print-popup plum-bigben-theme" data-site="plum" data-no-link="false" data-pass-hidden-categories="true" data-hide-when-empty="true" data-hide-mentions="true" style="float:right;clear:both" align="right" target="_blank">
+          </a>
+          {% endif %}
+    </div>
+
+
+      {{ pub.authors }}
+      ({% if pub.status == 'in press' %}{{ pub.status }}{% else %}{{pub.date | date: "%Y"}}{% endif %}).
+      <span class="title">{% if pub.doi %}
+      <a href="//dx.doi.org/{{ pub.doi }}" target="_blank">{{ pub.title }}</a>{% elsif pub.arxiv %}
+      <a href="{{ pub.arxiv }}" target="_blank">{{ pub.title }}</a>{% elsif pub.pdf %}
+      <a href="{{ pub.pdf }}" target="_blank">{{ pub.title }}</a>{% else %} {{ pub.title }}
+      {% endif %}</span>.
+      {% if pub.journal %}<i>{{ pub.journal }}</i>.
+      {% elsif pub.server %}<i>{{ pub.server }}</i>. {% endif %}
+      {% if pub.volume %}<i>{{ pub.volume }}</i>{% endif %}{% if pub.issue %}({{ pub.issue }}).{% endif %}
+      {% if pub.pages %}pp {{ pub.pages }}.{% endif %}
+      {% if pub.doi %}<a href="//dx.doi.org/{{ pub.doi }}" target="_blank">{{ pub.doi }}</a>.{% endif %}
+      {% if pub.arxiv-id %}<a href="{{ pub.arxiv }}" target="_blank">{{ pub.arxiv-id }}</a>.{% endif %}
+
+      <div class="small-icons">
+      {% if pub.arxiv %}
+      <a href="{{ pub.arxiv }}" title="arXiv" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.biorxiv %}
+        <a href="{{ pub.biorxiv }}" title="bioRxiv" target="_blank"><i class="ai ai-biorxiv" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.pubpeer %}
+        <a href="{{ pub.pubpeer }}" title="PubPeer" target="_blank"><i class="fas fa-comments"></i></a>
+      {% endif %}
+
+      {% if pub.doi %}
+        <a href="//dx.doi.org/{{ pub.doi }}" title="DOI" target="_blank"><i class="ai ai-doi" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.figshare %}
+        <a href="//figshare.com/{{ pub.figshare }}" title="figshare" target="_blank"><i class="ai ai-figshare" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.osf %}
+        <a href="//osf.io/{{ pub.osf }}"  title="OSF" target="_blank"><i class="ai ai-osf" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.overleaf %}
+        <a href="//overleaf.com/read/{{ pub.overleaf }}" title="Overleaf" target="_blank"><i class="ai ai-overleaf" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {%if pub.website %}
+        <a href="{{ pub.website }}" title="Website" target="_blank"><i class="fas fa-link"></i></a>
+      {% endif %}
+
+      {%if pub.pdf %}
+        <a href="{{ pub.pdf }}" title="PDF" target="_blank"><i class="far fa-file-pdf"></i></a>
+      {% endif %}
+
+      {% if pub.github %}
+        <a href="{{ pub.github }}" title="Code" target="_blank"><i class="fas fa-code"></i></a>
+      {% endif %}
+
+      {%if pub.demo %}
+        <a href="{{ pub.demo }}" title="Demo" target="_blank"><i class="fas fa-play"></i></a>
+      {% endif %}
+
+      {%if pub.viewer %}
+        <a href="{{ pub.viewer }}" title="Brain Viewer" target="_blank"><i class="fas fa-brain"></i></a>
+      {% endif %}
+
+
+    </div>
+
+    </li>
+  {% endfor %}
+</ul>

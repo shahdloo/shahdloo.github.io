@@ -1,0 +1,29 @@
+name: Fetch New CV
+on: repository_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: work around permission issue
+        run: git config --global --add safe.directory /github/workspace
+      - name: Checkout
+        if: github.event.action == 'update_cv'
+        uses: actions/checkout@v1
+      - name: Fetch New cv and Push Branch
+        if: github.event.action == 'update_cv'
+        uses: ./commit-cv
+        env:
+          BRANCH: resume-bot
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+          PULL_REQUEST_BODY: Updates cv
+          PULL_REQUEST_BRANCH: main
+      - name: automerge
+        uses: "pascalgn/automerge-action@v0.10.0"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: "!automerge"
+          MERGE_METHOD: rebase
+          MERGE_DELETE_BRANCH: true

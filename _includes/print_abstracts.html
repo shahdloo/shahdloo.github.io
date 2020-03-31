@@ -1,0 +1,82 @@
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+<ul class="item">
+  {% for pub in include.pubs %}
+
+  {% if pub.status == 'published' %}
+    {% if pub.type == 'preprint' %}
+      {% continue %}
+    {% endif %}
+  {% endif %}
+
+    <li class="item">
+
+<!--       <div data-badge-type="donut"
+      {% if pub.doi %}data-doi="{{ pub.doi }}"{% endif %}
+      {% if pub.arxiv-id %}data-arxiv-id="{{ pub.arxiv-id }}"{% endif %}
+      data-hide-no-mentions="true" data-hide-less-than="40" class="altmetric-embed" style="float:right;clear:both"></div> -->
+
+
+      {{ pub.authors }}
+      ({% if pub.status == 'in press' %}{{ pub.status }}{% else %}{{pub.date | date: "%Y"}}{% endif %}).
+      <span class="title">{% if pub.doi %}
+      <a href="//dx.doi.org/{{ pub.doi }}" target="_blank">{{ pub.title }}</a>{% elsif pub.arxiv %}
+      <a href="{{ pub.arxiv }}" target="_blank">{{ pub.title }}</a>{% elsif pub.pdf %}
+      <a href="{{ pub.pdf }}" target="_blank">{{ pub.title }}</a>{% else %} {{ pub.title }}
+      {% endif %}</span>.
+      {% if pub.journal %}<i>{{ pub.journal }}</i>.
+      {% elsif pub.server %}<i>{{ pub.server }}</i>. {% endif %}
+      {% if pub.doi %}<a href="//dx.doi.org/{{ pub.doi }}" target="_blank">{{ pub.doi }}</a>.{% endif %}
+      {% if pub.arxiv-id %}<a href="{{ pub.arxiv }}" target="_blank">{{ pub.arxiv-id }}</a>.{% endif %}
+      {% if pub.place %}{{ pub.place }}.{% endif %}
+
+      <div class="small-icons">
+      {% if pub.arxiv %}
+      <a href="{{ pub.arxiv }}" title="arXiv" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.poster %}
+        <a href="{{ pub.poster }}" title="poster" target="_blank"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.biorxiv %}
+        <a href="{{ pub.biorxiv }}" title="bioRxiv" target="_blank"><i class="ai ai-biorxiv" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.comments %}
+        <a href="{{ pub.comments }}" title="comments" target="_blank"><i class="fas fa-comments"></i></a>
+      {% endif %}
+
+      {% if pub.doi %}
+        <a href="//dx.doi.org/{{ pub.doi }}" title="DOI" target="_blank"><i class="ai ai-doi" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.figshare %}
+        <a href="//figshare.com/{{ pub.figshare }}" title="figshare" target="_blank"><i class="ai ai-figshare" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.github %}
+        <a href="//github.com/{{ pub.github }}" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+      {% endif %}
+
+      {% if pub.osf %}
+        <a href="//osf.io/{{ pub.osf }}"  title="OSF" target="_blank"><i class="ai ai-osf" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {% if pub.overleaf %}
+        <a href="//overleaf.com/read/{{ pub.overleaf }}" title="Overleaf" target="_blank"><i class="ai ai-overleaf" aria-hidden="true"></i></a>
+      {% endif %}
+
+      {%if pub.website %}
+        <a href="{{ pub.website }}" title="Website" target="_blank"><i class="fas fa-link"></i></a>
+      {% endif %}
+
+      {%if pub.pdf %}
+        <a href="{{ pub.pdf }}" title="PDF" target="_blank"><i class="far fa-file-pdf"></i></a>
+      {% endif %}
+
+
+    </div>
+
+    </li>
+  {% endfor %}
+</ul>
