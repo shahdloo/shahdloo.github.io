@@ -211,6 +211,10 @@ footer ul {
   color: #00e461;
 }
 
+.fa-brain:focus, .fa-brain:hover {
+  color: #831e29;
+}
+
 
 
 .wrapper {
