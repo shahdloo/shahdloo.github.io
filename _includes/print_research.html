@@ -24,13 +24,13 @@
       data-hide-no-mentions="false" data-hide-less-than="1" class="altmetric-embed" data-badge-popover="right" data-condensed="true" style="float:right;clear:both"></div> -->
       <div style="float:right;clear:both">
       <a 
-      {% if pub.doi %} href="https://plu.mx/plum/a/?doi={{ pub.doi }}"{% endif %}
-      {% if pub.arxiv-id %} href="https://plu.mx/plum/a/?arxiv={{ pub.arxiv-id }}"{% endif %} data-popup="right" data-size="medium" class="plumx-plum-print-popup plum-bigben-theme" data-site="plum" data-no-link="false" data-pass-hidden-categories="true" data-hide-when-empty="true" data-hide-mentions="true" style="float:right;clear:both" align="right"></a>
+      {% if pub.doi %} href="https://plu.mx/plum/a/?doi={{ pub.doi }}"
+      {% elsif pub.arxiv-id %} href="https://plu.mx/plum/a/?arxiv={{ pub.arxiv-id }}"{% endif %} data-popup="right" data-size="medium" class="plumx-plum-print-popup plum-bigben-theme" data-site="plum" data-no-link="false" data-pass-hidden-categories="true" data-hide-when-empty="true" data-hide-mentions="true" style="float:right;clear:both" align="right"></a>
     </div>
 
 
       {{ pub.authors }}
-      ({% if pub.status == 'inpress' %}{{ pub.status }}{% else %}{{pub.date | date: "%Y"}}{% endif %}).
+      ({% if pub.status == 'in press' %}{{ pub.status }}{% else %}{{pub.date | date: "%Y"}}{% endif %}).
       <span class="title">{% if pub.doi %}
       <a href="//dx.doi.org/{{ pub.doi }}">{{ pub.title }}</a>{% elsif pub.arxiv %}
       <a href="{{ pub.arxiv }}">{{ pub.title }}</a>{% elsif pub.pdf %}
