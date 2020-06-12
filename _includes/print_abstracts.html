@@ -10,14 +10,14 @@
 
     <li class="item">
 
-      <div data-badge-type="donut"
+<!--       <div data-badge-type="donut"
       {% if pub.doi %}data-doi="{{ pub.doi }}"{% endif %}
       {% if pub.arxiv-id %}data-arxiv-id="{{ pub.arxiv-id }}"{% endif %}
-      data-hide-no-mentions="true" data-hide-less-than="40" class="altmetric-embed" style="float:right;clear:both"></div>
+      data-hide-no-mentions="true" data-hide-less-than="40" class="altmetric-embed" style="float:right;clear:both"></div> -->
 
 
       {{ pub.authors }}
-      ({% if pub.status == 'inpress' %}{{ pub.status }}{% else %}{{pub.date | date: "%Y"}}{% endif %}).
+      ({% if pub.status == 'in press' %}{{ pub.status }}{% else %}{{pub.date | date: "%Y"}}{% endif %}).
       <span class="title">{% if pub.doi %}
       <a href="//dx.doi.org/{{ pub.doi }}">{{ pub.title }}</a>{% elsif pub.arxiv %}
       <a href="{{ pub.arxiv }}">{{ pub.title }}</a>{% elsif pub.pdf %}
