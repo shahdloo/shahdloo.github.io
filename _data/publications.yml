@@ -53,6 +53,7 @@
   server: arXiv
   doi: '10.1109/TMI.2018.2885599'
   arxiv: https://arxiv.org/abs/1802.01892
+  arxiv-id: 1802.01892
   pdf: https://arxiv.org/pdf/1802.01892.pdf
   github: icon-lab/PESCaT
 
@@ -65,7 +66,7 @@
   server: arXiv
   # doi: '10.1109/TMI.2018.2885599'
   arxiv: https://arxiv.org/pdf/1805.10704
-  arxiv-id: '1805.10704'
+  arxiv-id: 1805.10704
   pdf: https://arxiv.org/pdf/1805.10704.pdf
   # github: icon-lab/PESCaT
 
