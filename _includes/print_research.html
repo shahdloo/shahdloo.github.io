@@ -16,12 +16,18 @@
   {% endif %}
 
     <li class="item">
-
+      
+     
     <div style="float:right;clear:both">
-      <a 
+      {% if pub.status == 'in press' %}
+          {% continue %}
+        {% else %}  
+          <a 
       {% if pub.doi %} href="https://plu.mx/plum/a/?doi={{ pub.doi }}"
-      {% elsif pub.arxiv-id %} href="https://plu.mx/plum/a/?arxiv={{ pub.arxiv-id }}"{% endif %} data-popup="right" data-size="medium" class="plumx-plum-print-popup plum-bigben-theme" data-site="plum" data-no-link="false" data-pass-hidden-categories="true" data-hide-when-empty="true" data-hide-mentions="true" style="float:right;clear:both" align="right">
+      {% elsif pub.arxiv-id %} href="https://plu.mx/plum/a/?arxiv={{ pub.arxiv-id }}"
+             {% endif %} data-popup="right" data-size="medium" class="plumx-plum-print-popup plum-bigben-theme" data-site="plum" data-no-link="false" data-pass-hidden-categories="true" data-hide-when-empty="true" data-hide-mentions="true" style="float:right;clear:both" align="right">
           </a>
+          {% endif %}
     </div>
 
 
