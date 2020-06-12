@@ -19,9 +19,7 @@
       
      
     <div style="float:right;clear:both">
-      {% if pub.status == 'in press' %}
-          {% continue %}
-        {% else %}  
+      {% if pub.status != 'in press' %}
           <a 
       {% if pub.doi %} href="https://plu.mx/plum/a/?doi={{ pub.doi }}"
       {% elsif pub.arxiv-id %} href="https://plu.mx/plum/a/?arxiv={{ pub.arxiv-id }}"
