@@ -1,9 +1,20 @@
-- date: 2019-11-17
+- date: 2020-05-30
   type: journal
   status: in press
+  authors: Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E., Tinaz B. & &Ccedil;ukur T.
+  title: 'Prior-Guided Image Reconstruction for Accelerated Multi-Contrast MRI via Generative Adversarial Networks'
+  journal: IEEE Journal of Selected Topics in Signal Processing
+  pdf: /uploads/1-s2.0-S1053811919309747-main.pdf
+
+- date: 2020-08-01
+  type: journal
+  status: published
   authors: <strong>Shahdloo M.</strong>, &Ccedil;elik E. & &Ccedil;ukur T.
   title: 'Biased competition in semantic representation during natural visual search'
   journal: NeuroImage
+  volume: 216
+  issue: 1
+  pages: 116383
   biorxiv: https://www.biorxiv.org/content/10.1101/658096v1
   doi: 10.1016/j.neuroimage.2019.116383
   pdf: /uploads/1-s2.0-S1053811919309747-main.pdf
