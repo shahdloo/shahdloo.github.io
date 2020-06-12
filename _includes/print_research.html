@@ -17,15 +17,11 @@
 
     <li class="item">
 
-      
-      <!-- <div data-badge-type="donut" 
-      {% if pub.doi %}data-doi="{{ pub.doi }}"{% endif %}
-      {% if pub.arxiv-id %}data-arxiv-id="{{ pub.arxiv-id }}"{% endif %}
-      data-hide-no-mentions="false" data-hide-less-than="1" class="altmetric-embed" data-badge-popover="right" data-condensed="true" style="float:right;clear:both"></div> -->
-      <div style="float:right;clear:both">
+    <div style="float:right;clear:both">
       <a 
       {% if pub.doi %} href="https://plu.mx/plum/a/?doi={{ pub.doi }}"
-      {% elsif pub.arxiv-id %} href="https://plu.mx/plum/a/?arxiv={{ pub.arxiv-id }}"{% endif %} data-popup="right" data-size="medium" class="plumx-plum-print-popup plum-bigben-theme" data-site="plum" data-no-link="false" data-pass-hidden-categories="true" data-hide-when-empty="true" data-hide-mentions="true" style="float:right;clear:both" align="right"></a>
+      {% elsif pub.arxiv-id %} href="https://plu.mx/plum/a/?arxiv={{ pub.arxiv-id }}"{% endif %} data-popup="right" data-size="medium" class="plumx-plum-print-popup plum-bigben-theme" data-site="plum" data-no-link="false" data-pass-hidden-categories="true" data-hide-when-empty="true" data-hide-mentions="true" style="float:right;clear:both" align="right">
+          </a>
     </div>
 
 
