@@ -1,9 +1,10 @@
-- date: 2020-05-30
+- date: 2020-06-11
   type: journal
   status: in press
   authors: Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E., Tinaz B. & &Ccedil;ukur T.
   title: 'Prior-Guided Image Reconstruction for Accelerated Multi-Contrast MRI via Generative Adversarial Networks'
   journal: IEEE Journal of Selected Topics in Signal Processing
+  doi: 10.1109/JSTSP.2020.3001737
 
 - date: 2020-08-01
   type: journal
