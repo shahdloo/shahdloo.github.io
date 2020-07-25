@@ -18,7 +18,6 @@ jobs:
 #         path: uploads
 #       if: always()
       run: |
-        echo $DEPLOY_KEY
         # configure git
         git config --global user.name "shahdloo"
         git config --global user.email "shahdloo@gmail.com"
@@ -27,9 +26,7 @@ jobs:
         chmod 700 ~/.ssh
         echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
-        echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFMi16wvvaDFS+vbUMd4zvOF6rvwvKKhwtqJWv15a+ZJ" > ~/.ssh/actions_key.pub 
         cat ~/.ssh/id_ed25519
-        cat ~/.ssh/actions_key.pub
         eval "$(ssh-agent -s)"
         ssh-add ~/.ssh/id_ed25519
         ssh -vT git@github.com
