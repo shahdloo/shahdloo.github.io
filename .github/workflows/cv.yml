@@ -27,9 +27,10 @@ jobs:
         chmod 700 ~/.ssh
         echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
         cat ~/.ssh/id_rsa
+        ssh -vT git@github.com
 #       chmod 600 ~/.ssh/id_rsa
 #        git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-#        ssh -vT git@github.com
+        
 #         git clone --depth=1 git@github.com:shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
 #         cp -f cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
 #         cd "$GITHUB_WORKSPACE/website"
