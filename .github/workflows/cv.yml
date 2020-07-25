@@ -18,6 +18,12 @@ jobs:
         git config --global user.email "shahdloo@gmail.com"
         # setup ssh
         mkdir ~/.ssh
+        tee -a ~/.ssh/config << END
+          Host github.com  
+          HostName github.com
+          User git
+          IdentityFile ~/.ssh/id_ed25519
+        END
         chmod 700 ~/.ssh
         echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
