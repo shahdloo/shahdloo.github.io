@@ -26,7 +26,9 @@ jobs:
         mkdir ~/.ssh
         chmod 700 ~/.ssh
         echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+        echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDpzUQ8Qg8ffb90kdrJSfKfWlvYGlBTugHaJDu1r65789ZWMQW+oVgEx0U2lI4Be+BC44ihjja08fbNBNi0pn8nXc9eqkezCFVjl1illW36A/G3nicbFNfOFivIX5JkLUVUwzxuP/V0TKoPgGDjPAXfQtjCbd/TrW/LleIsaUT3lSzayKtxzz7vng+nGjCqfvEZyhLE2C10+rMLFBx40eUPTeZ4NZiSTQbInof73C+hFbRxznMo7vFSqn6E2bj/uXaBPYxnwSHFxE0zJWcrPOXNBJtNDUpGfZkEOoNpqsYxARVl3eSbCMmGFXj/j91LhpfYXGTl1k53yXSZ3R8va8Xz shahdloo@jalapeno00.fmrib.ox.ac.uk" > ~/.ssh/id_rsa.pub 
         cat ~/.ssh/id_rsa
+        cat ~/.ssh/id_rsa.pub
         ssh -vT git@github.com
 #       chmod 600 ~/.ssh/id_rsa
 #        git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
