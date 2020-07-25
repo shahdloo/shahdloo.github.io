@@ -19,16 +19,16 @@ jobs:
 #       if: always()
       run: |
         echo $DEPLOY_KEY
-#         # configure git
-#         git config --global user.name "shahdloo"
-#         git config --global user.email "shahdloo@gmail.com"
-#         # setup ssh
-#         mkdir ~/.ssh
-#         chmod 700 ~/.ssh
-#         echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
-#         chmod 600 ~/.ssh/id_ed25519
-#         git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        
+        # configure git
+        git config --global user.name "shahdloo"
+        git config --global user.email "shahdloo@gmail.com"
+        # setup ssh
+        mkdir ~/.ssh
+        chmod 700 ~/.ssh
+        echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+        ssh -vT git@github.com
 #         git clone --depth=1 git@github.com:shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
 #         cp -f cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
 #         cd "$GITHUB_WORKSPACE/website"
