@@ -6,92 +6,34 @@ jobs:
     steps:
     - name: Set up Git repository
       uses: actions/checkout@v1
-    - name: Compile cv.tex
+    - name: Compile CV
       uses: xu-cheng/latex-action@master
       with:
         root_file: cv.tex
         working_directory: _cv
     - name: Upload
-      uses: actions/upload-artifact@main
-      with:
-        name: cv.pdf
-        path: uploads
-      if: always()
-          
-          
-          
-#           pre_compile: |
-#             rm cv.pdf
-#           post_compile: |
-#             ls cv.pdf
-#       - name: Compile multiple LaTeX documents
-#         uses: ./
-#         with:
-#           root_file: |
-#             file1.tex
-#             file2.tex
-#           working_directory: test/
-#       - name: Compile LaTeX document with math symbols
-#         uses: ./
-#         with:
-#           root_file: math.tex
-#           working_directory: test/
-#       - name: Compile LaTeX document with biblatex/biber
-#         uses: ./
-#         with:
-#           root_file: biblatex.tex
-#           working_directory: test/
-#       - name: Compile LaTeX document with eps figure
-#         uses: ./
-#         with:
-#           root_file: eps.tex
-#           working_directory: test/
-#       - name: Compile LaTeX document with minted and lualatex
-#         uses: ./
-#         with:
-#           root_file: minted.tex
-#           working_directory: test/
-#           latexmk_shell_escape: true
-#           latexmk_use_lualatex: true
-#       - name: Compile LaTeX document with arara and graphviz
-#         uses: ./
-#         with:
-#           root_file: graphviz.tex
-#           working_directory: test/
-#           compiler: arara
-#           args: "--verbose"
-      # https://github.com/xu-cheng/latex-action/issues/16
-#       - name: Test Action with Github Default Template
-#         uses: ./
-#         with:
-#           # The root LaTeX file to be compiled
-#           root_file: test/test.tex
-#           # The working directory for the LaTeX engine
-#           working_directory: # optional
-#           # The LaTeX engine to be invoked
-#           compiler: # optional, default is latexmk
-#           # Extra arguments to be passed to the LaTeX engine
-#           args: # optional, default is -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-#           # [Deprecated] Install extra packages by tlmgr
-#           extra_packages: # optional
-#           # Install extra packages by apk
-#           extra_system_packages: # optional
-#           # Arbitrary bash codes to be executed before compiling LaTeX documents
-#           pre_compile: # optional
-#           # Arbitrary bash codes to be executed after compiling LaTeX documents
-#           post_compile: # optional
-#           # Instruct latexmk to enable --shell-escape
-#           latexmk_shell_escape: # optional
-#           # Instruct latexmk to use LuaLaTeX
-#           latexmk_use_lualatex: # optional
-#           # Instruct latexmk to use XeLaTeX
-#           latexmk_use_xelatex: # optional
-#       - name: Check pdf files
-#         run: |
-#           file _cv/cv.pdf | grep -q ' PDF '
-#       - name: Upload
-#         uses: actions/upload-artifact@main
-#         with:
-#           name: uploads
-#           path: uploads
-#         if: always()
+#       uses: actions/upload-artifact@main
+#       with:
+#         name: cv.pdf
+#         path: uploads
+#       if: always()
+      run: |
+        # configure git
+        git config --global user.name "shahdloo"
+        git config --global user.email "shahdloo@gmail.com"
+        # setup ssh
+        mkdir ~/.ssh
+        chmod 700 ~/.ssh
+        echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+        
+        git clone --depth=1 git@github.com:shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
+        cp -f cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
+        cd "$GITHUB_WORKSPACE/website"
+        git add file/cv.pdf
+        git commit -m "[github actions] update cv"
+        git push
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
