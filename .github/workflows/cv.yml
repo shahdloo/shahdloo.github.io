@@ -24,14 +24,14 @@ jobs:
 
         git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
-        git clone --depth=1 https://github.com/shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
+        git clone git@github.com/shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
         
-        cp -f _cv/cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
-        cd "$GITHUB_WORKSPACE/website"
-        git add uploads/cv.pdf
-        git commit -m "[github actions] update cv"
+#        cp -f _cv/cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
+#        cd "$GITHUB_WORKSPACE/website"
+#        git add uploads/cv.pdf
+#        git commit -m "[github actions] update cv"
 
-        git push origin master
+#        git push origin master
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
