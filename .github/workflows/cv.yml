@@ -29,16 +29,16 @@ jobs:
         cat ~/.ssh/id_ed25519
         eval "$(ssh-agent -s)"
         echo "success"
-        ssh -vT git@github.com
-#       chmod 600 ~/.ssh/id_rsa
-#        git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        
-#         git clone --depth=1 git@github.com:shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
-#         cp -f cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
-#         cd "$GITHUB_WORKSPACE/website"
-#         git add file/cv.pdf
-#         git commit -m "[github actions] update cv"
-#         git push
+
+        git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+        echo "success1"
+        git clone --depth=1 git@github.com:shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
+        echo "success2"
+        cp -f cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
+        cd "$GITHUB_WORKSPACE/website"
+        git add file/cv.pdf
+        git commit -m "[github actions] update cv"
+        git push
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
