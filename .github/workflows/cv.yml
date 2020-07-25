@@ -28,7 +28,7 @@ jobs:
         chmod 600 ~/.ssh/id_ed25519
         cat ~/.ssh/id_ed25519
         eval "$(ssh-agent -s)"
-        ssh-add ~/.ssh/id_ed25519
+        echo "success"
         ssh -vT git@github.com
 #       chmod 600 ~/.ssh/id_rsa
 #        git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
