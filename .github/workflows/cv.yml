@@ -26,6 +26,7 @@ jobs:
         mkdir ~/.ssh
         chmod 700 ~/.ssh
         echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
         echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFMi16wvvaDFS+vbUMd4zvOF6rvwvKKhwtqJWv15a+ZJ shahdloo@Mo-MBPro.broadband" > ~/.ssh/id_rsa.pub 
         cat ~/.ssh/id_rsa
         cat ~/.ssh/id_rsa.pub
