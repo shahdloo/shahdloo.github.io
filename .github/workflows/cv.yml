@@ -13,7 +13,6 @@ jobs:
         with:
           working_directory: _cv/
           root_file: |
-            file1.tex
-            file2.tex
+            cv.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-          post_compile: "latexmk -c"
+          post_compile: latexmk -c
