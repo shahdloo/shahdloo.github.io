@@ -30,7 +30,8 @@ jobs:
         cd "$GITHUB_WORKSPACE/website"
         git add uploads/cv.pdf
         git commit -m "[github actions] update cv"
-        git push
+        git remote add origin git@github.com:shahdloo/shahdloo.github.io.git 
+        git push origin master
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
