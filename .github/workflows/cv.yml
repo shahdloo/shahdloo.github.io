@@ -4,19 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-#     - name: Set up Git repository
-#       uses: actions/checkout@v1
-#     - name: Compile CV
-#       uses: xu-cheng/latex-action@master
-#       with:
-#         root_file: cv.tex
-#         working_directory: _cv
+    - name: Set up Git repository
+      uses: actions/checkout@v1
+    - name: Compile CV
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: cv.tex
+        working_directory: _cv
     - name: Upload
-#       uses: actions/upload-artifact@main
-#       with:
-#         name: cv.pdf
-#         path: uploads
-#       if: always()
       run: |
         # configure git
         git config --global user.name "shahdloo"
@@ -26,17 +21,14 @@ jobs:
         chmod 700 ~/.ssh
         echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
-        cat ~/.ssh/id_ed25519
-        eval "$(ssh-agent -s)"
-        echo "success"
 
         git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-        echo "success1"
+
         git clone --depth=1 https://github.com/shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
-        echo "success2"
-        cp -f cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
+        
+        cp -f _cv/cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
         cd "$GITHUB_WORKSPACE/website"
-        git add file/cv.pdf
+        git add uploads/cv.pdf
         git commit -m "[github actions] update cv"
         git push
       env:
