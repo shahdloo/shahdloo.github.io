@@ -4,6 +4,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v1
+    - name: Compile CV
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: cv.tex
+        working_directory: _cv
+    - name: Upload
+      uses: actions/upload-artifact@main
+      with:
+        name: paper
+        path: _cv/cv.pdf
 #     - name: Set up Git repository
 #       uses: actions/checkout@v1
 #     - name: Compile CV
@@ -11,30 +23,30 @@ jobs:
 #       with:
 #         root_file: cv.tex
 #         working_directory: _cv
-    - name: Upload
-      run: |
-        # configure git
-        git config --global user.name "shahdloo"
-        git config --global user.email "shahdloo@gmail.com"
-        # setup ssh
-        mkdir ~/.ssh
-        tee -a ~/.ssh/config << END
-          Host github.com  
-          HostName github.com
-          User git
-          IdentityFile ~/.ssh/id_ed25519
-        END
+#     - name: Upload
+#       run: |
+#         # configure git
+#         git config --global user.name "shahdloo"
+#         git config --global user.email "shahdloo@gmail.com"
+#         # setup ssh
+#         mkdir ~/.ssh
+#         tee -a ~/.ssh/config << END
+#           Host github.com  
+#           HostName github.com
+#           User git
+#           IdentityFile ~/.ssh/id_ed25519
+#         END
 
-        chmod 700 ~/.ssh
-        echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
-        chmod 600 ~/.ssh/id_ed25519
+#         chmod 700 ~/.ssh
+#         echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+#         chmod 600 ~/.ssh/id_ed25519
         
-        echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEyGACZmMe98Q3qBv9+DGZsb7a8VJpbhRINF0m/QPdI5" > ~/.ssh/id_ed25519.pub
-        chmod 600 ~/.ssh/id_ed25519.pub
+#         echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEyGACZmMe98Q3qBv9+DGZsb7a8VJpbhRINF0m/QPdI5" > ~/.ssh/id_ed25519.pub
+#         chmod 600 ~/.ssh/id_ed25519.pub
         
-        git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+#         git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
         
-        git clone git@github.com:shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
+#         git clone git@github.com:shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
 #        eval 'ssh-agent -s' && ssh-add ~/.ssh/id_ed25519 && 
 
 #        cp -f _cv/cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
@@ -43,6 +55,6 @@ jobs:
 #        git commit -m "[github actions] update cv"
 
 #        git push origin master
-      env:
-        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+#       env:
+#         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+#       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
