@@ -23,8 +23,9 @@ jobs:
         chmod 600 ~/.ssh/id_ed25519
 
         git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-
-        git clone git@github.com/shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
+        
+        ssh -T git@github.com
+#        git clone git@github.com:shahdloo/shahdloo.github.io.git "$GITHUB_WORKSPACE/website"
         
 #        cp -f _cv/cv.pdf "$GITHUB_WORKSPACE/website/uploads/cv.pdf"
 #        cd "$GITHUB_WORKSPACE/website"
