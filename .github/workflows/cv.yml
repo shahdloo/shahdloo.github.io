@@ -4,13 +4,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Set up Git repository
-      uses: actions/checkout@v1
-    - name: Compile CV
-      uses: xu-cheng/latex-action@master
-      with:
-        root_file: cv.tex
-        working_directory: _cv
+#     - name: Set up Git repository
+#       uses: actions/checkout@v1
+#     - name: Compile CV
+#       uses: xu-cheng/latex-action@master
+#       with:
+#         root_file: cv.tex
+#         working_directory: _cv
     - name: Upload
 #       uses: actions/upload-artifact@main
 #       with:
