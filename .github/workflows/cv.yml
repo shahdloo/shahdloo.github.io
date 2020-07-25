@@ -11,6 +11,12 @@ jobs:
       with:
         root_file: cv.tex
         working_directory: _cv
+    - name: Upload
+      uses: actions/upload-artifact@main
+      with:
+        name: cv.pdf
+        path: uploads
+      if: always()
           
           
           
