@@ -2,6 +2,8 @@ name: compile upload cv
 on: [push, pull_request]
 jobs:
   build:
+    env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
     runs-on: ubuntu-latest
     steps:
     - name: Set up Git repository
@@ -47,6 +49,5 @@ jobs:
 #        git commit -m "[github actions] update cv"
 
 #        git push origin master
-      env:
-        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      
 #       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
