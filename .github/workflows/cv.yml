@@ -47,6 +47,6 @@ jobs:
 #        git commit -m "[github actions] update cv"
 
 #        git push origin master
-#       env:
-#         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
 #       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
