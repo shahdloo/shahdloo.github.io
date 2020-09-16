@@ -10,6 +10,10 @@ layout: default
 </div>
 
 <div id="accordion">
+  <h1 id="research" class="panel">Current Projects</h1>
+  <div class="panel-content">
+    {% include projects.html %}
+  </div>
   <h1 id="pubs" class="panel">Publications</h1>
   <div class="panel-content">
     {% include loop_publications.html %}
@@ -18,11 +22,7 @@ layout: default
   <div class="panel-content">
     {% include cv.html %}
   </div>
-  <h1 id="research" class="panel">Current Projects</h1>
-  <div class="panel-content">
-    {% include projects.html %}
-  </div>
-  <h1 id="code" class="panel"><span class="fab fa-spotify"></span></h1>
+  <h1 id="code" class="panel"><span class="fas fa-headphones-alt"></span></h1>
   <div class="panel-content">
     {% include life.html %}
   </div>
