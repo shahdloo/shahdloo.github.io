@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         if: github.event.action == 'update_cv'
         uses: actions/checkout@v1
-      - name: Fetch New Resume and Push Branch
+      - name: Fetch New cv and Push Branch
         if: github.event.action == 'update_cv'
         uses: ./commit-cv
         env:
