@@ -5,7 +5,7 @@ on:
       - opened
       - edited
 env:
-  MERGE_LABELS: "wip"
+  MERGE_LABELS: "!automerge"
   MERGE_METHOD: rebase
   MERGE_DELETE_BRANCH: true
 jobs:
@@ -16,6 +16,6 @@ jobs:
         uses: "pascalgn/automerge-action@v0.10.0"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_LABELS: "wip"
+          MERGE_LABELS: "!automerge"
           MERGE_METHOD: rebase
           MERGE_DELETE_BRANCH: true
