@@ -3,6 +3,7 @@ on:
   pull_request:
     types:
       - opened
+      - edited
 env:
   MERGE_LABELS: "wip"
   MERGE_METHOD: rebase
