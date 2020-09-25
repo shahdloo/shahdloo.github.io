@@ -1,5 +1,7 @@
 name: automerge
 on: [push, pull_request]
+env:
+  MERGE_LABELS: ""
 jobs:
   automerge:
     runs-on: ubuntu-latest
@@ -10,4 +12,3 @@ jobs:
           args: "--trace"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_LABELS: ""
