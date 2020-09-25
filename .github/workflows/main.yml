@@ -18,3 +18,10 @@ jobs:
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           PULL_REQUEST_BODY: Updates cv
           PULL_REQUEST_BRANCH: main
+      - name: automerge
+        uses: "pascalgn/automerge-action@v0.10.0"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: "!automerge"
+          MERGE_METHOD: rebase
+          MERGE_DELETE_BRANCH: true
