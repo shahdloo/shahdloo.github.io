@@ -20,4 +20,4 @@ LABEL "homepage"="http://github.com/actions"
 LABEL "maintainer"="Mo SH"
 
 ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "/usr/src/app/entrypoint.sh"]
