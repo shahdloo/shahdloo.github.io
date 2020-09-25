@@ -1,14 +1,20 @@
 name: automerge
-on: [push, pull_request]
+on: 
+  pull_request:
+    types:
+      - opened
 env:
-  MERGE_LABELS: ""
+  MERGE_LABELS: "wip"
+  MERGE_METHOD: rebase
+  MERGE_DELETE_BRANCH: true
 jobs:
   automerge:
     runs-on: ubuntu-latest
     steps:
       - name: automerge
         uses: "pascalgn/automerge-action@v0.10.0"
-        with:
-          args: "--trace"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: "wip"
+          MERGE_METHOD: rebase
+          MERGE_DELETE_BRANCH: true
