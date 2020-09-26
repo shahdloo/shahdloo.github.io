@@ -58,10 +58,12 @@ main() {
   RES=$(curl -sSL -H "${AUTH_HEADER}" -H "${HEADER}" --user "${GITHUB_ACTOR}" -X GET ${RELEASES_URL})
   VERSION=$(echo "${RES}" | jq --raw-output '.tag_name')
   PDF_URL="https://github.com/shahdloo/resume/releases/download/${VERSION}/cv.pdf"
+  REFS_URL="https://github.com/shahdloo/resume/releases/download/${VERSION}/library.bib"
   echo "PDF URL: ${PDF_URL}"
 
   # download resume.pdf and save in static/resume.pdf
   curl -L0 "${PDF_URL}" --output ./uploads/cv.pdf
+  curl -L0 "${REFS_URL}" --output ./uploads/refs.bib
 
   git config --global push.default current
   git config --global user.email "shahdloo@gmail.com"
