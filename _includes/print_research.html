@@ -23,7 +23,7 @@
           <a 
       {% if pub.doi %} href="https://plu.mx/plum/a/?doi={{ pub.doi }}"
       {% elsif pub.arxiv-id %} href="https://plu.mx/plum/a/?arxiv={{ pub.arxiv-id }}"
-             {% endif %} data-popup="right" data-size="medium" class="plumx-plum-print-popup plum-bigben-theme" data-site="plum" data-no-link="false" data-pass-hidden-categories="true" data-hide-when-empty="true" data-hide-mentions="true" style="float:right;clear:both" align="right">
+             {% endif %} data-popup="right" data-size="medium" class="plumx-plum-print-popup plum-bigben-theme" data-site="plum" data-no-link="false" data-pass-hidden-categories="true" data-hide-when-empty="true" data-hide-mentions="true" style="float:right;clear:both" align="right" target="_blank">
           </a>
           {% endif %}
     </div>
@@ -32,60 +32,60 @@
       {{ pub.authors }}
       ({% if pub.status == 'in press' %}{{ pub.status }}{% else %}{{pub.date | date: "%Y"}}{% endif %}).
       <span class="title">{% if pub.doi %}
-      <a href="//dx.doi.org/{{ pub.doi }}">{{ pub.title }}</a>{% elsif pub.arxiv %}
-      <a href="{{ pub.arxiv }}">{{ pub.title }}</a>{% elsif pub.pdf %}
-      <a href="{{ pub.pdf }}">{{ pub.title }}</a>{% else %} {{ pub.title }}
+      <a href="//dx.doi.org/{{ pub.doi }}" target="_blank">{{ pub.title }}</a>{% elsif pub.arxiv %}
+      <a href="{{ pub.arxiv }}" target="_blank">{{ pub.title }}</a>{% elsif pub.pdf %}
+      <a href="{{ pub.pdf }}" target="_blank">{{ pub.title }}</a>{% else %} {{ pub.title }}
       {% endif %}</span>.
       {% if pub.journal %}<i>{{ pub.journal }}</i>.
       {% elsif pub.server %}<i>{{ pub.server }}</i>. {% endif %}
       {% if pub.volume %}<i>{{ pub.volume }}</i>{% endif %}{% if pub.issue %}({{ pub.issue }}).{% endif %}
       {% if pub.pages %}pp {{ pub.pages }}.{% endif %}
-      {% if pub.doi %}<a href="//dx.doi.org/{{ pub.doi }}">{{ pub.doi }}</a>.{% endif %}
-      {% if pub.arxiv-id %}<a href="{{ pub.arxiv }}">{{ pub.arxiv-id }}</a>.{% endif %}
+      {% if pub.doi %}<a href="//dx.doi.org/{{ pub.doi }}" target="_blank">{{ pub.doi }}</a>.{% endif %}
+      {% if pub.arxiv-id %}<a href="{{ pub.arxiv }}" target="_blank">{{ pub.arxiv-id }}</a>.{% endif %}
 
       <div class="small-icons">
       {% if pub.arxiv %}
-      <a href="{{ pub.arxiv }}" title="arXiv"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
+      <a href="{{ pub.arxiv }}" title="arXiv" target="_blank"><i class="ai ai-arxiv" aria-hidden="true"></i></a>
       {% endif %}
 
       {% if pub.biorxiv %}
-        <a href="{{ pub.biorxiv }}" title="bioRxiv"><i class="ai ai-biorxiv" aria-hidden="true"></i></a>
+        <a href="{{ pub.biorxiv }}" title="bioRxiv" target="_blank"><i class="ai ai-biorxiv" aria-hidden="true"></i></a>
       {% endif %}
 
       {% if pub.comments %}
-        <a href="{{ pub.comments }}" title="comments"><i class="fas fa-comments"></i></a>
+        <a href="{{ pub.comments }}" title="comments" target="_blank"><i class="fas fa-comments"></i></a>
       {% endif %}
 
       {% if pub.doi %}
-        <a href="//dx.doi.org/{{ pub.doi }}" title="DOI"><i class="ai ai-doi" aria-hidden="true"></i></a>
+        <a href="//dx.doi.org/{{ pub.doi }}" title="DOI" target="_blank"><i class="ai ai-doi" aria-hidden="true"></i></a>
       {% endif %}
 
       {% if pub.figshare %}
-        <a href="//figshare.com/{{ pub.figshare }}" title="figshare"><i class="ai ai-figshare" aria-hidden="true"></i></a>
+        <a href="//figshare.com/{{ pub.figshare }}" title="figshare" target="_blank"><i class="ai ai-figshare" aria-hidden="true"></i></a>
       {% endif %}
 
       {% if pub.github %}
-        <a href="//github.com/{{ pub.github }}" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="//github.com/{{ pub.github }}" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
       {% endif %}
 
       {% if pub.osf %}
-        <a href="//osf.io/{{ pub.osf }}"  title="OSF"><i class="ai ai-osf" aria-hidden="true"></i></a>
+        <a href="//osf.io/{{ pub.osf }}"  title="OSF" target="_blank"><i class="ai ai-osf" aria-hidden="true"></i></a>
       {% endif %}
 
       {% if pub.overleaf %}
-        <a href="//overleaf.com/read/{{ pub.overleaf }}" title="Overleaf"><i class="ai ai-overleaf" aria-hidden="true"></i></a>
+        <a href="//overleaf.com/read/{{ pub.overleaf }}" title="Overleaf" target="_blank"><i class="ai ai-overleaf" aria-hidden="true"></i></a>
       {% endif %}
 
       {%if pub.website %}
-        <a href="{{ pub.website }}" title="Website"><i class="fas fa-link"></i></a>
+        <a href="{{ pub.website }}" title="Website" target="_blank"><i class="fas fa-link"></i></a>
       {% endif %}
 
       {%if pub.demo %}
-        <a href="{{ pub.demo }}" title="Demo"><i class="fas fa-play"></i></a>
+        <a href="{{ pub.demo }}" title="Demo" target="_blank"><i class="fas fa-play"></i></a>
       {% endif %}
 
       {%if pub.pdf %}
-        <a href="{{ pub.pdf }}" title="PDF"><i class="far fa-file-pdf"></i></a>
+        <a href="{{ pub.pdf }}" title="PDF" target="_blank"><i class="far fa-file-pdf"></i></a>
       {% endif %}
 
     </div>
