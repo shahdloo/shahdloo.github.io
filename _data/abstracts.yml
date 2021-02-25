@@ -37,13 +37,12 @@
   type: abstract
   status: unpublished
   authors:  Papp D., Schüffelgen U., <strong>Shahdloo M.</strong>, Rieger S. W., Hess A. T., Rushworth M., and Clare S. 
-  title: 'Imaging performance of a multi-channel non-human primate coi'
+  title: 'Imaging performance of a multi-channel non-human primate coil'
   place: Online
   journal: ISMRM
   pdf: /uploads/DPapp_NHPcoil_2021.pdf
-  # website: https://cds.ismrm.org/protected/19MPresentations/abstracts/0666.html
 
-  - date: 2021-05-11
+- date: 2021-05-11
   type: abstract
   status: unpublished
   authors:  <strong>Shahdloo M.</strong>, Papp D., Schüffelgen U., Miller K., Rushworth M., and Chiew M. 
@@ -51,7 +50,6 @@
   place: Online
   journal: ISMRM
   pdf: /uploads/ismrm_21.pdf
-  # website: https://cds.ismrm.org/protected/19MPresentations/abstracts/0666.html
 
 - date: 2019-05-11
   type: abstract
