@@ -33,6 +33,26 @@
   pdf: /uploads/OHBM2019_Final.pdf
   website: https://ww5.aievolution.com/hbm1901/index.cfm?do=abs.viewAbs&abs=2330
 
+- date: 2021-05-11
+  type: abstract
+  status: unpublished
+  authors:  Papp D., Schüffelgen U., <strong>Shahdloo M.</strong>, Rieger S. W., Hess A. T., Rushworth M., and Clare S. 
+  title: 'Imaging performance of a multi-channel non-human primate coi'
+  place: Online
+  journal: ISMRM
+  pdf: /uploads/DPapp_NHPcoil_2021.pdf
+  # website: https://cds.ismrm.org/protected/19MPresentations/abstracts/0666.html
+
+  - date: 2021-05-11
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, Papp D., Schüffelgen U., Miller K., Rushworth M., and Chiew M. 
+  title: 'Highly accelerated fMRI of awake behaving non-human primates via model-based dynamic off-resonance correction'
+  place: Online
+  journal: ISMRM
+  pdf: /uploads/ismrm_21.pdf
+  # website: https://cds.ismrm.org/protected/19MPresentations/abstracts/0666.html
+
 - date: 2019-05-11
   type: abstract
   status: unpublished
