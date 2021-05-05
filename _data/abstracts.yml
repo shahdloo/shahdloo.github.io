@@ -40,7 +40,8 @@
   title: 'Imaging performance of a multi-channel non-human primate coil'
   place: Online
   journal: ISMRM
-  # pdf: /uploads/DPapp_NHPcoil_2021.pdf
+  pdf: /uploads/2516.pdf
+  website: https://index.mirasmart.com/ISMRM2021/PDFfiles/2516.html
 
 - date: 2021-05-11
   type: abstract
@@ -49,7 +50,9 @@
   title: 'Highly accelerated fMRI of awake behaving non-human primates via model-based dynamic off-resonance correction'
   place: Online
   journal: ISMRM
-  # pdf: /uploads/ismrm_21.pdf
+  pdf: /uploads/2596.pdf
+  website: https://index.mirasmart.com/ISMRM2021/PDFfiles/2596.html
+  poster: /uploads/2596-shahdloo.mp4
 
 - date: 2019-05-11
   type: abstract
