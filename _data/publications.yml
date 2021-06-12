@@ -1,12 +1,10 @@
-- date: 2020-12-07
-  type: preprint
-  status: unpublished
-
+- date: 2021-06-07
+  type: journal
+  status: published
   authors:  Kiremitci I., Yilmaz O., &Ccedil;elik E., <strong>Shahdloo M.</strong>, Huth A.G. & &Ccedil;ukur T.
   title: 'Attentional Modulation of Hierarchical Speech Representations in a Multi-Talker Environment'
-  server: bioRxiv
-  biorxiv: https://www.biorxiv.org/content/10.1101/2020.12.05.412957v1
-  doi: 10.1101/2020.12.05.412957
+  journal: Cerebral Cortex
+  doi: 10.1093/cercor/bhab136
   pdf: /uploads/2020.12.05.412957v1.full
 
 - date: 2020-10-01
