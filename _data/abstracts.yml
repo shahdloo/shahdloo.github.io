@@ -2,7 +2,7 @@
 - date: 2019-09-12
   type: abstract
   status: unpublished
-  authors:  <strong>Shahdloo M.</strong>, Acar M. & &Ccedil;ukur T.
+  authors:  <strong>Shahdloo M.</strong>, Acar M., and &Ccedil;ukur T.
   title: 'Attention During Story Listening Modulates Temporal Receptive Windows Across Human Cortex'
   place: Berlin, Germany
   journal: Cognitive Computational Neuroscience (CCN)
@@ -14,7 +14,7 @@
 - date: 2019-10-05
   type: abstract
   status: unpublished
-  authors:  <strong>Shahdloo M.</strong> & &Ccedil;ukur T.
+  authors:  <strong>Shahdloo M.</strong>, and &Ccedil;ukur T.
   title: 'Tradeoff between fat-suppression and partial-voluming in weighted combination alternating repetition-time (ATR) balanced SSFP'
   place: Rotterdam, Netherlands
   journal: ESMRMB
@@ -25,7 +25,7 @@
 - date: 2019-06-05
   type: abstract
   status: unpublished
-  authors:  <strong>Shahdloo M.</strong>, &Uuml;rgen B.A. & &Ccedil;ukur T.
+  authors:  <strong>Shahdloo M.</strong>, &Uuml;rgen B. A., and &Ccedil;ukur T.
   title: 'Attention to action categories shifts semantic tuning toward targets across the brain'
   place: Rome, Italy
   journal: OHBM
@@ -46,7 +46,7 @@
 - date: 2021-05-11
   type: abstract
   status: unpublished
-  authors:  <strong>Shahdloo M.</strong>, Papp D., Schüffelgen U., Miller K., Rushworth M., and Chiew M. 
+  authors:  <strong>Shahdloo M.</strong>, Papp D., Schüffelgen U., Miller K. L., Rushworth M., and Chiew M. 
   title: 'Highly accelerated fMRI of awake behaving non-human primates via model-based dynamic off-resonance correction'
   place: Online
   journal: ISMRM
@@ -57,7 +57,7 @@
 - date: 2019-05-11
   type: abstract
   status: unpublished
-  authors:  Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E. & &Ccedil;ukur T.
+  authors:  Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E., and &Ccedil;ukur T.
   title: 'Joint recovery of variably accelerated multi-contrast MRI acquisitions via generative adversarial networks'
   place: Montréal, Canada
   journal: ISMRM
@@ -67,7 +67,7 @@
 - date: 2018-06-11
   type: abstract
   status: unpublished
-  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E. & &Ccedil;ukur T.
+  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
   title: 'Rapid self-tuning compressed-sensing MRI using projection onto epigraph sets'
   place: Paris, France
   journal: ISMRM
@@ -77,7 +77,7 @@
 - date: 2017-09-11
   type: abstract
   status: unpublished
-  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E. & &Ccedil;ukur T.
+  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
   title: 'Adaptive Wavelet Thresholding for Profile-Encoding Reconstruction of Balanced Steady-State Free Precession Acquisitions'
   place: Barcelona, Spain
   journal: ESMRMB
@@ -86,7 +86,7 @@
 - date: 2017-06-05
   type: abstract
   status: unpublished
-  authors:  <strong>Shahdloo M.</strong> & &Ccedil;ukur T.
+  authors:  <strong>Shahdloo M.</strong>, and &Ccedil;ukur T.
   title: 'Biased competition in semantic representations during category-based visual search'
   place: Vancouver, Canada
   journal: OHBM

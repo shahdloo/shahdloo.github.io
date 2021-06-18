@@ -1,7 +1,17 @@
+- date: 2021-06-17
+  type: journal
+  status: published
+  authors:  <strong>Shahdloo M.</strong>, &Ccedil;elik E., &Uuml;rgen B. A., Gallant J. L., and &Ccedil;ukur T.
+  title: 'Task-Dependent Warping of Semantic Representations During Search for Visual Action Categories'
+  server: bioRxiv
+  biorxiv: https://www.biorxiv.org/content/10.1101/2021.06.17.448789v1
+  doi: 10.1101/2021.06.17.448789
+  pdf: /uploads/attentionwarp_biorxiv.pdf
+
 - date: 2021-06-07
   type: journal
   status: published
-  authors:  Kiremitci I., Yilmaz O., &Ccedil;elik E., <strong>Shahdloo M.</strong>, Huth A.G. & &Ccedil;ukur T.
+  authors:  Kiremitci I., Yilmaz O., &Ccedil;elik E., <strong>Shahdloo M.</strong>, Huth A.G., and &Ccedil;ukur T.
   title: 'Attentional Modulation of Hierarchical Speech Representations in a Multi-Talker Environment'
   journal: Cerebral Cortex
   doi: 10.1093/cercor/bhab136
@@ -10,7 +20,7 @@
 - date: 2020-10-01
   type: journal
   status: published
-  authors: Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E., Tinaz B. & &Ccedil;ukur T.
+  authors: Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E., Tinaz B., and &Ccedil;ukur T.
   title: 'Prior-Guided Image Reconstruction for Accelerated Multi-Contrast MRI via Generative Adversarial Networks'
   journal: IEEE Journal of Selected Topics in Signal Processing
   volume: 14
@@ -22,7 +32,7 @@
 - date: 2020-08-01
   type: journal
   status: published
-  authors: <strong>Shahdloo M.</strong>, &Ccedil;elik E. & &Ccedil;ukur T.
+  authors: <strong>Shahdloo M.</strong>, &Ccedil;elik E., and &Ccedil;ukur T.
   title: 'Biased Competition in Semantic Representation During Natural Visual Search'
   journal: NeuroImage
   volume: 216
@@ -36,7 +46,7 @@
 - date: 2019-06-10
   type: journal
   status: published
-  authors: <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E. & &Ccedil;ukur T.
+  authors: <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
   title: 'Projection onto Epigraph Sets for Rapid Self-Tuning Compressed Sensing MRI'
   journal: IEEE Transactions on Medical Imaging
   volume: 38
@@ -50,9 +60,9 @@
 
 
 - date: 2018-05-27
-  type: preprint
-  status: unpublished
-  authors:  Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E. & &Ccedil;ukur T.
+  type: journal
+  status: published
+  authors:  Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E., and &Ccedil;ukur T.
   title: 'Synergistic Reconstruction and Synthesis via Generative Adversarial Networks for Accelerated Multi-Contrast MRI'
   server: arXiv
   arxiv: https://arxiv.org/pdf/1805.10704
