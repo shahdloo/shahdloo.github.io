@@ -88,6 +88,10 @@
         <a href="{{ pub.pdf }}" title="PDF" target="_blank"><i class="far fa-file-pdf"></i></a>
       {% endif %}
 
+      {%if pub.viewer %}
+        <a href="{{ pub.viewer }}" title="Brain Viewer" target="_blank"><i class="fas fa-brain"></i></a>
+      {% endif %}
+
     </div>
 
     </li>
