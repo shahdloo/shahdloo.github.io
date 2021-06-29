@@ -10,7 +10,6 @@ RUN apk --update add --no-cache \
   wget \
   bash \
   nodejs \
-  nodejs-npm \
   git \
   openssh \
   curl
