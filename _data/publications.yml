@@ -1,3 +1,13 @@
+- date: 2021-09-24
+  type: journal
+  status: published
+  authors:  <strong>Shahdloo M.</strong>, Schüffelgen U., Papp D., Miller K. L., and Chiew M.
+  title: 'Model-Based Dynamic Off-Resonance Correction for Improved Accelerated fMRI in Awake Behaving Non-Human Primates'
+  journal: bioRxiv
+  biorxiv: https://www.biorxiv.org/content/10.1101/2021.09.23.461491v1
+  doi: 10.1101/2021.09.23.461491
+  pdf: /uploads/NHP_moco.pdf
+
 - date: 2021-06-17
   type: journal
   status: published
@@ -16,7 +26,7 @@
   title: 'Attentional Modulation of Hierarchical Speech Representations in a Multi-Talker Environment'
   journal: Cerebral Cortex
   doi: 10.1093/cercor/bhab136
-  pdf: /uploads/2020.12.05.412957v1.full
+  pdf: /uploads/2020.12.05.412957v1.full.pdf
 
 - date: 2020-10-01
   type: journal
