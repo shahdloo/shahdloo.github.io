@@ -7,6 +7,7 @@
   biorxiv: https://www.biorxiv.org/content/10.1101/2021.09.23.461491v1
   doi: 10.1101/2021.09.23.461491
   pdf: /uploads/NHP_moco.pdf
+  github: https://github.com/shahdloo/nhp_recon
 
 - date: 2021-06-17
   type: journal
@@ -66,8 +67,9 @@
   doi: 10.1109/TMI.2018.2885599
   arxiv: https://arxiv.org/abs/1802.01892
   pdf: /uploads/08567963.pdf
-  github: icon-lab/PESCaT
+  github: https://github.com/icon-lab/PESCaT
   demo: http://moshahdloo.com/demo_PESCaT.html
+  
 
 
 - date: 2018-05-27
