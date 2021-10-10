@@ -101,6 +101,7 @@ a:hover, p a:hover, li a:hover, footer a:hover, .panel:hover {
   color: #007998;
   text-decoration: none;
   cursor: pointer;
+  transition: opacity  0s linear 0s;
 }
 
 p.center {
@@ -218,6 +219,10 @@ footer ul {
 
 .fa-brain:focus, .fa-brain:hover {
   color: #831e29;
+}
+
+.fa-google:focus, .fa-google:hover {
+  color: #5285ec;
 }
 
 
