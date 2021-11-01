@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px 'Lucida Grande'; color: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px 'Lucida Grande'; color: #000000; min-height: 26.0px}
+  </style>
+</head>
+<body>
+<p class="p1">I’m going to talk about MR image encoding in k-space, and different approaches to recover the image from k-space measurements.</p>
+<p class="p2"><br></p>
+<p class="p1">since it’s an educational talk I’ll keep things simple, but just ask if you need more in depth info on any of this.</p>
+<p class="p2"><br></p>
+<p class="p1">This is what to expect to hear in this talk.</p>
+<p class="p2"><br></p>
+<p class="p1">First, since probably many of you are already familiar with k-space, I’ll just skim over how MR signal is expressed in terms of k-space samples,</p>
+<p class="p1">then talk about how we can recover the image from k-space samples, in the general form of solving a linear encoding model.</p>
+<p class="p1">and then some special cases of k-space formation and processing, under the headings of non-cartesian sampling and accelerated sampling.</p>
+<p class="p2"><br></p>
+<p class="p1">These initial parts of the talk overlap with what other talks we saw earlier today, especially Xi’s talk about spatial encoding in MR,<span class="Apple-converted-space">  </span>I won’t put too much time explaining these stuff but it might also be good to hear it once again from a slightly different perspective.</p>
+<p class="p2"><br></p>
+<p class="p1">So assume we have this one-D object that we are going to image, what we do is that we turn on an RF field which makes the spins rotate in the transverse plane. But the problem is that spins from all locations rotate more or less with the same frquency. So we would naturally need some way to differentiate them.</p>
+<p class="p2"><br></p>
+<p class="p1">we do this by introducing a gradient magnetic field that changes with x.</p>
+<p class="p1">The effect of this field is that although initially the spins are aligned more or less similar to each other</p>
+<p class="p1">now they rotate with different frequencies, and we exactly know their rotation frequency as a function of location.</p>
+<p class="p2"><br></p>
+<p class="p1">As a result, at each time point, the phase accumulated in each of these spins will also be a function of location.</p>
+<p class="p2"><br></p>
+<p class="p1">We can now use this space and time dependant phase to express the collected signal s(t) in terms of magnetisation as a function of x, that is f(x)</p>
+<p class="p2"><br></p>
+<p class="p1">one step further, we rearrange the phase expression into this form where \gamma is the larmor frequency and Gx is the gradient amplitude, and call this time-dependant part k_x.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">which leads to this signal equation, which is nothing but the definition of fourier transform of the magnetisation. But note that this neat relationship here didn’t happen magically, this is the exact result of the linear design of the gradients.</p>
+<p class="p2"><br></p>
+<p class="p1">Of-course, as Xi also mentioned the extension of this to 2D, or even 3D is straightforward using phase encoding.</p>
+<p class="p2"><br></p>
+<p class="p1">Okay, now we know how to relate the MR signal to magnetisation at each location. But the data we acquire in practice is digital, and in fact we sample in certain intervals of time, which results in the digitised signal equation wrt to time.</p>
+<p class="p2"><br></p>
+<p class="p1">But we need one more step in order to be able to express the signal fully in discrete form and that is achieved by discretising the magnetisation across space, and you can regard the mean magnetisation across each of the \Delta x bins as the pixel values. With this final step, we can express the signal as a summation, which is in fact the definition of discrete fourier transform.</p>
+<p class="p2"><br></p>
+<p class="p1">Now, in practice the signal that we acquire is also superimposed by noise, but the neat thing is that we can express the relationship between the acquired signal y and the image f in terms of a matrix equation.</p>
+<p class="p1">And the minimum-norm solution to this equation that we call the encoding model, can be achieved by inverting A if possible, and that is in fact possible in the simplest case, because by design the matrix A is the matrix of discrete fourier transform bases, and its inverse is the inverse DFT. This is exactly why the first thing that we learn about MR reconstruction is to do the inverse DFT.</p>
+<p class="p2"><br></p>
+<p class="p1">But note that any deviation from this design — for example non-cartesian sampling, … — would mean that the matrix A is no longer the matrix of fourier bases and the solution is different from the inverse DFT.<span class="Apple-converted-space"> </span></p>
+<p class="p1">In principle,<span class="Apple-converted-space">  </span>the solution to the regularised minimization problem should be found if we want to find a reconstruction in the general case.</p>
+<p class="p2"><br></p>
+<p class="p1">Okay, we talked about the cartesian sampling up to now, but there are zillions of other ways to sample the k-space for instance spirals, or radial sampling or even this crazy random radial-like sampling, and each of them can provide some practical benefits and what is usually required to reconstruct in these cases is something called non-uniform FFT, but it’s in principle nothing but gridding + FFT!<span class="Apple-converted-space"> </span></p>
+<p class="p1">so it seems that now we naturally should see how gridding is performed.</p>
+<p class="p2"><br></p>
+<p class="p1">In gridding the goal is to find the signal values on the cartesian grid (the green lines), based on the data acquired on the non-cartesian grid (the blue lines). To do this, the most common approach is using interpolation, where you evaluate a kernel function centered on the non-cartesian grid at the cartesian grid points. Then use the kernel to distribute the power of the sample onto the neighbouring cartesian grid points.</p>
+<p class="p2"><br></p>
+<p class="p1">And you do this for all the acquired points, and add together all the points to yield these green samples.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">One issue that is evident now is that the interpolated samples are overestimating the actual signal, and this is because the sampling density of the non-cartesian grid is not uniform, for instance here samples are more concentrated around the centre.</p>
+<p class="p1">To fix this issue, one simple solution is to use the inverse of the sampling density to move the samples back to their true place.</p>
+<p class="p1">There are also a couple of practical considerations, such as the resolution of the grid that you choose, the kernel function that you use and their specifications, or estimating the sampling density, that could affect the gridding result.</p>
+<p class="p2"><br></p>
+<p class="p1">Another case were we deviate from the simple inverse DFT solution is in accelerated MRI.</p>
+<p class="p1">As we saw previously when we have the enough samples from the recorded signal y, and we have the encoding matrix A, we can find the reconstruction solution by solving the linear model.</p>
+<p class="p2"><br></p>
+<p class="p1">But in MRI we usually accelerate the scan by omitting some portion of the k-space during sampling, and what it does is that now the number of equations that we have in this linear model is less than the number of unknowns and we cannot find the solution uniquely.</p>
+<p class="p1">In these cases, we should use other techniques to recover the missing samples, and now we are going to have a look at a couple of these methods.</p>
+<p class="p2"><br></p>
+<p class="p1">One of the classic acceleration methods in MR is partial fourier, in which we use a property of fourier transform which states that the fourier transform of a real signal has conjugate symmetry, to theoretically omit the data from half of the k-space.<span class="Apple-converted-space"> </span></p>
+<p class="p1">In practice, due to different system and model imperfections around 3/4 or 5/6 of the k-space is sampled.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">To recover the non-sampled k-space data, the most common method is projection onto convex sets (or POCS), where we start from an initial guess and iteratively project onto several convex conditions until convergence.</p>
+<p class="p1">In partial fourier, the two conditions are conjugate symmetry, and data consistency.<span class="Apple-converted-space"> </span></p>
+<p class="p1">In practice, this means that we start with the initial guess, which is usually the zero-filled reconstruction, just the simple inverse DFT of the data.<span class="Apple-converted-space"> </span></p>
+<p class="p1">At the first step, we project onto the conjugate symmetry set, meaning that we enforce the k-space data to be non-negative real, and then put back the phase of the image to be the phase that is estimated from the fully-sampled central part of the k-space.</p>
+<p class="p2"><br></p>
+<p class="p1">In the second step, we project the result onto the data consistency set, which means that we put back the acquired part of the k-space. These two steps are iterated until the reconstruction stop changing significantly across iterations.</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Another common approach in accelerated MRI is parallel imaging, where we use the spatial data redundancy introduced by phased-array receive coils to fill out the undersampled parts of the k-space, and hence, eliminate the aliasing artefacts that are caused by undersampling the k-space.</p>
+<p class="p2"><br></p>
+<p class="p1">Phased-array coils have multiple channels, that each are sensitive to a small portion of the field of view, and this creates redundancy.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">To see how this happens, let’s get back to our encoding model.</p>
+<p class="p1">Here, we have data from coil1 and coil2, that each are samples of the same magnetisation, but weighted with different spatial sensitivity profiles, which are multiplied by the encoding matrix.</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">This leads to weighted encoding matrices for each coil.</p>
+<p class="p2"><br></p>
+<p class="p1">Now, if we subsample the k-space</p>
+<p class="p2"><br></p>
+<p class="p1">we still have enough independent equations to solve the linear model and recover the signal, and that is exactly due to the data redundancy that the coils introduced.</p>
+<p class="p2"><br></p>
+<p class="p1">Several reconstruction methods use this extra spatial encoding power to accelerate the acquisition.<span class="Apple-converted-space"> </span></p>
+<p class="p1">One of the commonly-used such method is SENSE, which stands for sensitivity encoding, and was introduced in 99.</p>
+<p class="p1">It’s an image-space method, and uses the coil-sensitivity profiles to disambiguate the aliased pixels.</p>
+<p class="p1">Assuming we have data from two coils I1 and I2, that have aliasing due to undersampling. We can express the unique image pixel values in the reduced FOV (for instance the value at this green square) as a combination of the underlying image f multiplied by the coil sensitivity C1, plus an aliased replica of the pixel which is located \Delta y pixels apart, and we know this distance exactly because we know the undersampling pattern.</p>
+<p class="p1">Similarly, data at the same location from the second coil can be specified.</p>
+<p class="p2"><br></p>
+<p class="p1">This leads to two separate equations, for the two unknowns f(y) and f(y+\Delta y) that can be solved for all the pixels in the reduced FOV and the reconstruction is ready!</p>
+<p class="p2"><br></p>
+<p class="p1">However, a perquisite to the reconstruction is estimation of coil sensitivity profiles using either prescan data, fully-sampled calibration data, or low-rank methods such as ESPIRIT and similar methods.</p>
+<p class="p2"><br></p>
+<p class="p1">A seemingly different but principally similar common method is GRAPPA, which stands for this long name.</p>
+<p class="p1">Unlike SENSE, GRAPPA works in the k-space domain.</p>
+<p class="p1">To have a “SENSE” of what grappa does (no pun intended), note that the image seen by each coil is actually the multiplication of the underlying image with the spatial sensitivity profile.<span class="Apple-converted-space"> </span></p>
+<p class="p1">In the k-space domain, this multiplication is equivalent by convolution with a kernel which is the fourier transform of the coil sensitivity. This convolution operation distributes the data across the k-space domain and creates correlations among data points. This means that if we know these correlation patterns we can synthesise the missing data points from the acquired points.</p>
+<p class="p2"><br></p>
+<p class="p1">In practice, what we do in GRAPPA is that we use the fully-sampled central part of the k-space to learn the linear dependencies among data points, in other words learn the kernels, which we call the GRAPPA weights.</p>
+<p class="p1">Then we use the kernels to interpolate the missing data points, and finally reconstruct data from single coils and combine.</p>
+<p class="p1">Note that in this process we did not explicitly measure coil sensitivities, but implicitly estimated them while learning the kernels.</p>
+<p class="p2"><br></p>
+<p class="p1">Here, again we have a couple of subtleties that could affect the reconstruction, such as the choice of the dimensions of kernels, how to solve the interpolation problem, and most importantly the assumption that the linear dependencies hold across the k-space that can be slightly violated in presence of imperfections.</p>
+<p class="p2"><br></p>
+<p class="p1">To sum up, in this talk we saw how k-space is in principle related to the underlying object magnetisation.</p>
+<p class="p1">We talked about the general problem of image reconstruction which is the solution of the encoding model.</p>
+<p class="p1">How we can sample the k-space, either on the cartesian grid or in any arbitrary pattern.</p>
+<p class="p1">And finally a couple of accelerated MRI techniques such as Partial fourier, SENSE and GRAPPA.</p>
+<p class="p2"><br></p>
+<p class="p1">I hope that you enjoyed the talk and it had been useful, and I’d be glad to answer any questions.</p>
+</body>
+</html>
