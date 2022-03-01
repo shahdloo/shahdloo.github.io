@@ -3,7 +3,8 @@
 #
 
 # Name of your site (displayed in the header)
-name: Mo Shahdloo | neuro-nerd
+name: Mo Shahdloo
+title: Mo Shahdloo
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -16,7 +17,7 @@ google_analytics: UA-138223033-2
 # Used for Sitemap.xml and your RSS feed
 url: http://moshahdloo.com
 
-description: Personal website of Mohammad Shahdloo
+description: Personal website of Mo Shahdloo
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
