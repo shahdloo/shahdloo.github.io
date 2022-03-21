@@ -1,4 +1,42 @@
   
+- date: 2019-05-11
+  type: abstract
+  status: unpublished
+  authors:  Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E., and &Ccedil;ukur T.
+  title: 'Joint recovery of variably accelerated multi-contrast MRI acquisitions via generative adversarial networks'
+  place: Montréal, Canada
+  journal: ISMRM
+  pdf: /uploads/0666.pdf
+  website: https://cds.ismrm.org/protected/19MPresentations/abstracts/0666.html
+
+- date: 2018-06-11
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
+  title: 'Rapid self-tuning compressed-sensing MRI using projection onto epigraph sets'
+  place: Paris, France
+  journal: ISMRM
+  pdf: /uploads/0251.pdf
+  website: https://cds.ismrm.org/protected/18MPresentations/abstracts/0251.html
+
+- date: 2017-09-11
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
+  title: 'Adaptive Wavelet Thresholding for Profile-Encoding Reconstruction of Balanced Steady-State Free Precession Acquisitions'
+  place: Barcelona, Spain
+  journal: ESMRMB
+  pdf: /uploads/391.pdf
+
+- date: 2017-06-05
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, and &Ccedil;ukur T.
+  title: 'Biased competition in semantic representations during category-based visual search'
+  place: Vancouver, Canada
+  journal: OHBM
+  pdf: /uploads/ohbm17.pdf
+
 - date: 2019-09-12
   type: abstract
   status: unpublished
@@ -59,44 +97,15 @@
   status: unpublished
   authors:  <strong>Shahdloo M.</strong>, and Chiew M. 
   title: 'Optimal Singular-Value Shrinkage for fMRI Denoising'
-  place: London
+  place: London, England
   journal: ISMRM
   pdf: /uploads/shahdloo_ISMRM22_fmriDenoising.pdf
 
-- date: 2019-05-11
+- date: 2022-06-11
   type: abstract
   status: unpublished
-  authors:  Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E., and &Ccedil;ukur T.
-  title: 'Joint recovery of variably accelerated multi-contrast MRI acquisitions via generative adversarial networks'
-  place: Montréal, Canada
-  journal: ISMRM
-  pdf: /uploads/0666.pdf
-  website: https://cds.ismrm.org/protected/19MPresentations/abstracts/0666.html
-
-- date: 2018-06-11
-  type: abstract
-  status: unpublished
-  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
-  title: 'Rapid self-tuning compressed-sensing MRI using projection onto epigraph sets'
-  place: Paris, France
-  journal: ISMRM
-  pdf: /uploads/0251.pdf
-  website: https://cds.ismrm.org/protected/18MPresentations/abstracts/0251.html
-
-- date: 2017-09-11
-  type: abstract
-  status: unpublished
-  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
-  title: 'Adaptive Wavelet Thresholding for Profile-Encoding Reconstruction of Balanced Steady-State Free Precession Acquisitions'
-  place: Barcelona, Spain
-  journal: ESMRMB
-  pdf: /uploads/391.pdf
-
-- date: 2017-06-05
-  type: abstract
-  status: unpublished
-  authors:  <strong>Shahdloo M.</strong>, and &Ccedil;ukur T.
-  title: 'Biased competition in semantic representations during category-based visual search'
-  place: Vancouver, Canada
+  authors:  <strong>Shahdloo M.</strong>, Khalighinejad N., Harbison C., Rushworth M. and Chiew M. 
+  title: 'Dynamic off-resonance correction improves functional data quality in fMRI of awake behaving NHPs'
+  place: Glasgow, Scotland
   journal: OHBM
-  pdf: /uploads/ohbm17.pdf
+  pdf: /uploads/OHBM22.pdf
