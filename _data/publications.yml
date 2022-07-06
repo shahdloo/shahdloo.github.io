@@ -12,12 +12,12 @@
   pdf: /uploads/Shahdloo_MRM22.pdf
   github: https://github.com/shahdloo/nhp_recon
 
-- date: 2021-06-17
+- date: 2022-07-01
   type: journal
   status: published
   authors:  <strong>Shahdloo M.</strong>, &Ccedil;elik E., &Uuml;rgen B. A., Gallant J. L., and &Ccedil;ukur T.
   title: 'Task-Dependent Warping of Semantic Representations During Search for Visual Action Categories'
-  server: bioRxiv
+  server: Journal of Neuroscience
   biorxiv: https://www.biorxiv.org/content/10.1101/2021.06.17.448789v1
   doi: 10.1101/2021.06.17.448789
   pdf: /uploads/attentionwarp_biorxiv.pdf
