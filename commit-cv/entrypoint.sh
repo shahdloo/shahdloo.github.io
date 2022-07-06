@@ -68,6 +68,7 @@ main() {
   git config --global push.default current
   git config --global user.email "shahdloo@gmail.com"
   git config --global user.name "Mo Shahdloo"
+  git config --global --add safe.directory /github/workspace
 
   BRANCH="${BRANCH}/${VERSION}"
   git checkout -b "${BRANCH}"
