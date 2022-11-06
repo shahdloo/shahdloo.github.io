@@ -31,3 +31,5 @@ gem "kramdown", ">= 2.3.0"
 
 
 gem "webrick", "~> 1.7"
+#gem "RubyGems", "~> 3.3.22"
+#gem "commonmarker", "~> 1.0.0.pre"
