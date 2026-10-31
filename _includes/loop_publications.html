@@ -1,0 +1,15 @@
+{% assign pubs = site.data.publications | sort:"date" | reverse %}
+{% assign pubabstracts = site.data.abstracts | sort:"date" | reverse %}
+
+
+{% assign preprints = pubs | where:"type","preprint" %}
+{% assign articles = pubs | where:"type","journal" %}
+{% assign abstracts = pubs | where:"type","abstract" %}
+
+<span><a href="{{ site.baseurl }}/uploads/refs.bib" download>Download the bibliography</a>.</span>
+
+<h2>Research papers and editorials</h2>
+{% include print_research.html pubs=pubs %}
+
+<h2>Conference publications</h2>
+{% include print_abstracts.html pubs=pubabstracts %}

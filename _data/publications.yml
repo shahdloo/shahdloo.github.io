@@ -1,0 +1,137 @@
+- date: 2026-10-25
+  type: conference
+  status: accepted
+  authors: <strong>Shahdloo M.</strong>, Sardari F., and Salvaris M.
+  title: 'Latent-Lens: Visual Perception in Small Language Models Through Latent Communication'
+  journal: Advances in Neural Information Processing Systems (NeurIPS 2026, accepted)
+  pdf: /latent-lens/latent-lens-neurips-2026.pdf
+  website: /latent-lens/
+
+- date: 2025-08-20
+  type: journal
+  status: published
+  authors: Gaspar A., Nagtegaal M., Santini F., Schauman S., <strong>Shahdloo M.</strong>, Van Houdt P. J., Wang Y.-F., and Webb A.
+  title: 'Advancing MRI, together: open science in MR research'
+  journal: Magnetic Resonance Materials in Physics, Biology and Medicine
+  doi: 10.1007/s10334-025-01286-8
+  volume: 38
+  issue: 4
+  pages: 635-638
+
+- date: 2025-06-27
+  type: journal
+  status: published
+  authors: Priestley L., Chiew M., <strong>Shahdloo M.</strong>, Mahmoodi A., Cheng X., Cleveland R., Rushworth M., and Khalighinejad N.
+  title: 'Dorsal raphe nucleus controls motivation-state transitions in monkeys'
+  journal: Science Advances
+  volume: 11
+  issue: 26
+  article: eads1236
+  biorxiv: https://www.biorxiv.org/content/10.1101/2024.02.13.580224v1
+  doi: 10.1126/sciadv.ads1236
+  pdf: /uploads/sciadv.ads1236.pdf
+
+- date: 2024-06-25
+  type: journal
+  status: published
+  authors: <strong>Shahdloo M.</strong>, Khalighinejad N., Priestley L., Rushworth M., and Chiew M.
+  title: 'Dynamic off-resonance correction improves functional image analysis in fMRI of awake behaving non-human primates'
+  journal: Frontiers in Neuroimaging
+  volume: 3
+  article: 1336887
+  biorxiv: https://www.biorxiv.org/content/10.1101/2023.10.18.562796v1
+  doi: 10.3389/fnimg.2024.1336887
+  pdf: /uploads/fnimg-03-1336887.pdf
+
+- date: 2022-01-26
+  type: journal
+  status: published
+  authors:  <strong>Shahdloo M.</strong>, Schüffelgen U., Papp D., Miller K. L., and Chiew M.
+  title: 'Model-based dynamic off-resonance correction for improved accelerated fMRI in awake behaving nonhuman primates'
+  journal: Magnetic Resonance in Medicine
+  biorxiv: https://www.biorxiv.org/content/10.1101/2021.09.23.461491v1
+  doi: 10.1002/mrm.29167
+  volume: 87
+  issue: 6
+  pages: 2922-2932
+  pdf: /uploads/Shahdloo_MRM22.pdf
+  github: https://github.com/shahdloo/nhp_recon
+
+- date: 2022-07-21
+  type: journal
+  status: published
+  authors:  <strong>Shahdloo M.</strong>, &Ccedil;elik E., &Uuml;rgen B. A., Gallant J. L., and &Ccedil;ukur T.
+  title: 'Task-Dependent Warping of Semantic Representations during Search for Visual Action Categories'
+  journal: The Journal of Neuroscience
+  volume: 42
+  issue: 35
+  pages: 6782-6799
+  biorxiv: https://www.biorxiv.org/content/10.1101/2021.06.17.448789v1
+  doi: 10.1523/jneurosci.1372-21.2022
+  pdf: /uploads/JNEUROSCI.1372-21.2022.full.pdf
+  viewer: /brain-viewer/attention-actions/
+  pubpeer: https://pubpeer.com/publications/941D2C08AE96AE3276683BBC722218
+
+- date: 2021-06-11
+  type: journal
+  status: published
+  authors: Kiremit&ccedil;i I., Yilmaz &Ouml;., &Ccedil;elik E., <strong>Shahdloo M.</strong>, Huth A. G., and &Ccedil;ukur T.
+  title: 'Attentional Modulation of Hierarchical Speech Representations in a Multitalker Environment'
+  journal: Cerebral Cortex
+  volume: 31
+  issue: 11
+  pages: 4986–5005
+  doi: 10.1093/cercor/bhab136
+  pdf: /uploads/2020.12.05.412957v1.full.pdf
+
+- date: 2020-10-01
+  type: journal
+  status: published
+  authors: Dar S. U. H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz M. E., Tinaz B., and &Ccedil;ukur T.
+  title: 'Prior-Guided Image Reconstruction for Accelerated Multi-Contrast MRI via Generative Adversarial Networks'
+  journal: IEEE Journal of Selected Topics in Signal Processing
+  volume: 14
+  issue: 6
+  pages: 1072-1087
+  doi: 10.1109/JSTSP.2020.3001737
+  pdf: /uploads/09115255.pdf
+
+- date: 2020-08-01
+  type: journal
+  status: published
+  authors: <strong>Shahdloo M.</strong>, &Ccedil;elik E., and &Ccedil;ukur T.
+  title: 'Biased Competition in Semantic Representation During Natural Visual Search'
+  journal: NeuroImage
+  volume: 216
+  article: 116383
+  biorxiv: https://www.biorxiv.org/content/10.1101/658096v1
+  doi: 10.1016/j.neuroimage.2019.116383
+  pdf: /uploads/1-s2.0-S1053811919309747-main.pdf
+  
+
+- date: 2019-07-01
+  type: journal
+  status: published
+  authors: <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
+  title: 'Projection onto Epigraph Sets for Rapid Self-Tuning Compressed Sensing MRI'
+  journal: IEEE Transactions on Medical Imaging
+  volume: 38
+  issue: 7
+  pages: 1677-1689
+  doi: 10.1109/TMI.2018.2885599
+  arxiv: https://arxiv.org/abs/1802.01892
+  pdf: /uploads/08567963.pdf
+  github: https://github.com/icon-lab/PESCaT
+  demo: http://moshahdloo.com/demo_PESCaT.html
+  
+
+
+- date: 2018-05-27
+  type: preprint
+  status: preprint
+  authors: Dar S. U. H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz M. E., and &Ccedil;ukur T.
+  title: 'Synergistic Reconstruction and Synthesis via Generative Adversarial Networks for Accelerated Multi-Contrast MRI'
+  server: arXiv
+  arxiv: https://arxiv.org/pdf/1805.10704
+  arxiv-id: 1805.10704
+  pdf: https://arxiv.org/pdf/1805.10704.pdf

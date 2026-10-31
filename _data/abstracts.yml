@@ -1,0 +1,113 @@
+  
+- date: 2019-05-11
+  type: abstract
+  status: unpublished
+  authors:  Dar S.U.H., Yurt M., <strong>Shahdloo M.</strong>, Ildiz E., and &Ccedil;ukur T.
+  title: 'Joint recovery of variably accelerated multi-contrast MRI acquisitions via generative adversarial networks'
+  place: Montréal, Canada
+  journal: ISMRM
+  pdf: /uploads/0666.pdf
+  website: https://cds.ismrm.org/protected/19MPresentations/abstracts/0666.html
+
+- date: 2018-06-11
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
+  title: 'Rapid self-tuning compressed-sensing MRI using projection onto epigraph sets'
+  place: Paris, France
+  journal: ISMRM
+  pdf: /uploads/0251.pdf
+  website: https://cds.ismrm.org/protected/18MPresentations/abstracts/0251.html
+
+- date: 2017-09-11
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, Ilicak E., Tofighi M., Saritas E.U., &Ccedil;etin A.E., and &Ccedil;ukur T.
+  title: 'Adaptive Wavelet Thresholding for Profile-Encoding Reconstruction of Balanced Steady-State Free Precession Acquisitions'
+  place: Barcelona, Spain
+  journal: ESMRMB
+  pdf: /uploads/391.pdf
+
+- date: 2017-06-05
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, and &Ccedil;ukur T.
+  title: 'Biased competition in semantic representations during category-based visual search'
+  place: Vancouver, Canada
+  journal: OHBM
+  pdf: /uploads/ohbm17.pdf
+
+- date: 2019-09-12
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, Acar M., and &Ccedil;ukur T.
+  title: 'Attention During Story Listening Modulates Temporal Receptive Windows Across Human Cortex'
+  place: Berlin, Germany
+  journal: Cognitive Computational Neuroscience (CCN)
+  poster: /uploads/ccn19_poster_web.pdf
+  pdf: /uploads/CCN2019.pdf
+  doi: 10.32470/CCN.2019.1039-0
+  website: https://ccneuro.org/2019/Papers/ViewPapers.asp?PaperNum=1039
+
+- date: 2019-10-05
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, and &Ccedil;ukur T.
+  title: 'Tradeoff between fat-suppression and partial-voluming in weighted combination alternating repetition-time (ATR) balanced SSFP'
+  place: Rotterdam, Netherlands
+  journal: ESMRMB
+  poster: /uploads/esmrmb19_poster_web.pdf
+  pdf: /uploads/A-1143.pdf
+  website: https://link.springer.com/article/10.1007/s10334-019-00755-1
+
+- date: 2019-06-05
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, &Uuml;rgen B. A., and &Ccedil;ukur T.
+  title: 'Attention to action categories shifts semantic tuning toward targets across the brain'
+  place: Rome, Italy
+  journal: OHBM
+  poster: /uploads/hbm19_poster_web.pdf
+  pdf: /uploads/OHBM2019_Final.pdf
+  website: https://ww5.aievolution.com/hbm1901/index.cfm?do=abs.viewAbs&abs=2330
+
+- date: 2021-05-11
+  type: abstract
+  status: unpublished
+  authors:  Papp D., Schüffelgen U., <strong>Shahdloo M.</strong>, Rieger S. W., Hess A. T., Rushworth M., and Clare S. 
+  title: 'Imaging performance of a multi-channel non-human primate coil'
+  place: Online
+  journal: ISMRM
+  pdf: /uploads/2516.pdf
+  website: https://index.mirasmart.com/ISMRM2021/PDFfiles/2516.html
+
+- date: 2021-05-11
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, Papp D., Schüffelgen U., Miller K. L., Rushworth M., and Chiew M. 
+  title: 'Highly accelerated fMRI of awake behaving non-human primates via model-based dynamic off-resonance correction'
+  place: Online
+  journal: ISMRM
+  pdf: /uploads/2596.pdf
+  website: https://index.mirasmart.com/ISMRM2021/PDFfiles/2596.html
+  poster: /uploads/2596-shahdloo.mp4
+
+- date: 2022-05-11
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, and Chiew M. 
+  title: 'Optimal Singular-Value Shrinkage for fMRI Denoising'
+  place: London, England
+  journal: ISMRM
+  poster: https://youtu.be/8BVI63IyKV0
+  website: https://ismrm-esmrmb-ismrt2022.us3.pathable.com/meetings/virtual/poster/chLgiEtnwRE9RzrXz
+  pdf: /uploads/shahdloo_ISMRM22_fmriDenoising.pdf
+
+- date: 2022-06-11
+  type: abstract
+  status: unpublished
+  authors:  <strong>Shahdloo M.</strong>, Khalighinejad N., Harbison C., Miller K. L., Rushworth M. and Chiew M. 
+  title: 'Dynamic off-resonance correction improves functional data quality in fMRI of awake behaving NHPs'
+  place: Glasgow, Scotland
+  journal: OHBM
+  pdf: /uploads/OHBM22.pdf
